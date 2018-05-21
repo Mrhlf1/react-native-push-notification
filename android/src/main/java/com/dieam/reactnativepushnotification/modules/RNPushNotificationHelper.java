@@ -28,6 +28,7 @@ import org.json.JSONException;
 
 import java.util.Arrays;
 
+import static android.support.v4.app.NotificationCompat.DEFAULT_ALL;
 import static com.dieam.reactnativepushnotification.modules.RNPushNotification.LOG_TAG;
 import static com.dieam.reactnativepushnotification.modules.RNPushNotificationAttributes.fromJson;
 
@@ -161,6 +162,7 @@ public class RNPushNotificationHelper {
                     .setContentTitle(title)
                     .setTicker(bundle.getString("ticker"))
                     .setVisibility(NotificationCompat.VISIBILITY_PRIVATE)
+                    .setDefaults(DEFAULT_ALL)
                     .setPriority(NotificationCompat.PRIORITY_HIGH)
                     .setAutoCancel(bundle.getBoolean("autoCancel", true));
 
